@@ -181,3 +181,9 @@ app {
         display: block;
     }
 }
+
+ @media print {
+    .sidebar, .top-row {
+        display: none;
+    }
+ }
