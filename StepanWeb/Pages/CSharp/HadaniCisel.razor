@@ -1,0 +1,44 @@
+﻿@page "/csharp/hadani-cisel"
+<h1>Hádání čísel</h1>
+<p>myslím si číslo od 0 do miliardy</p>
+<p>mělo by ti stačit 30 pokusů</p>
+<p>jaký je tvůj tip?</p>
+<p><input type="number" @bind="tip" /><button @onclick="Send" class="btn btn-danger">odeslat</button></p>
+<p>počet pokusů: @pokus</p>
+<p>@odpoved</p>
+<p><button @onclick="Restart" class="btn btn-secondary">hrát znovu</button></p>
+
+@code {
+    int pokus;
+    int hadaneCislo;
+    int tip;
+    string odpoved;
+    protected override void OnInitialized()
+    {
+        hadaneCislo = new Random().Next(1000000000);
+    }
+    void Send()
+    {
+        if (hadaneCislo > tip)
+        {
+            odpoved = "hledané číslo je větší";
+        }
+        if (hadaneCislo < tip)
+        {
+            odpoved = "hledané číslo je menší";
+        }
+        if (hadaneCislo == tip)
+        {
+            odpoved = "to je ono!";
+        }
+        pokus = pokus + 1;
+
+    }
+    void Restart()
+    {
+        hadaneCislo = new Random().Next(1000000000);
+        pokus = 0;
+        odpoved = "myslím si další číslo";
+    }
+
+}
