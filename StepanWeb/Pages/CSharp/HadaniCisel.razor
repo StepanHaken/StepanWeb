@@ -1,14 +1,19 @@
 ﻿@page "/csharp/hadani-cisel"
 <h1>Hádání čísel</h1>
 <p>myslím si číslo od 0 do miliardy</p>
-<p>mělo by ti stačit 30 pokusů</p>
+<p>mělo by ti stačit @limit pokusů</p>
 <p>jaký je tvůj tip?</p>
 <p><input type="number" @bind="tip" /><button @onclick="Send" class="btn btn-danger">odeslat</button></p>
 <p>počet pokusů: @pokus</p>
 <p>@odpoved</p>
+@if (pokus > limit)
+{
+    <p>vyčerpal jsi @limit pokusů</p>
+}
 <p><button @onclick="Restart" class="btn btn-secondary">hrát znovu</button></p>
 
 @code {
+    int limit = 30;
     int pokus;
     int hadaneCislo;
     int tip;
