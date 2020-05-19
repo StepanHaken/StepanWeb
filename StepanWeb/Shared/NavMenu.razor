@@ -24,9 +24,17 @@
                 <span class="oi oi-puzzle-piece" aria-hidden="true"></span> hádání čísel
             </NavLink>
         </li>
+        <li class="nav-item px-3 nadpis">
+            <h1>Závěrečná práce ZŠ</h1>
+        </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="/zaverecna-prace/titulka">
                 <span class="oi oi-document" aria-hidden="true"></span> Titulka
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/zaverecna-prace" Match="NavLinkMatch.All">
+                <span class="oi oi-document" aria-hidden="true"></span> Obsah
             </NavLink>
         </li>
         <li class="nav-item px-3">
@@ -51,6 +59,20 @@
         </li>
     </ul>
 </div>
+<style>
+    .sidebar .nadpis {
+        border-bottom: 1px solid white;
+        color: white;
+        padding-left: 3rem;
+        margin-bottom: 0.3rem;
+        margin-top: 1rem;
+    }
+
+        .sidebar .nadpis h1 {
+            font-size: 1.3rem;
+            padding-top: 1rem;
+        }
+</style>
 
 @code {
     private bool collapseNavMenu = true;

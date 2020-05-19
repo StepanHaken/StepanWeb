@@ -1,0 +1,62 @@
+﻿@page "/zaverecna-prace"
+<section class="obsah">
+
+    <h1>Obsah</h1>
+    <ul>
+        <li><a href="/zaverecna-prace/uvod">Úvod</a> <span class="stranka">(https://stepan.haken.dev/zaverecna-prace/uvod)</span></li>
+        <li><a href="/zaverecna-prace/vlastni-text#programovani">Počítače</a> <span class="stranka">(https://stepan.haken.dev/zaverecna-prace/vlastni-text#programovani)</span></li>
+        <li>Programování</li>
+        <li>
+            Programovací jazyky
+            <ul>
+                <li>
+                    Blockly
+                    <ul>
+                        <li>Code.org</li>
+                        <li>Scratch</li>
+                    </ul>
+                </li>
+                <li>
+                    C-jazyky
+                    <ul>
+                        <li><a href="/zaverecna-prace/vlastni-text#csharp">C#</a> <span class="stranka">(https://stepan.haken.dev/zaverecna-prace/vlastni-text#csharp)</span></li>
+                    </ul>
+                </li>
+                <li>Další jazyky</li>
+            </ul>
+        </li>
+        <li>Závěr</li>
+        <li>Zdroje</li>
+    </ul>
+</section>
+<style>
+    .obsah {
+        max-width: 800px;
+    }
+        .obsah ul {
+            list-style-type: none;
+        }
+
+        .obsah .stranka {
+            display: none;
+        }
+
+
+    @@media print {
+        .obsah {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16pt;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            .obsah a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .obsah .stranka {
+                display: inline;
+            }
+    }
+</style>
